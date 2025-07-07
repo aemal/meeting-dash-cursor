@@ -1,0 +1,11 @@
+# Task ID: 11
+# Title: Update Existing Meeting Minute in Supabase
+# Status: pending
+# Dependencies: 2, 8
+# Priority: high
+# Description: Update existing meeting minutes in the Supabase database.
+# Details:
+On save in edit mode, update the record in Supabase. Close drawer and update table.
+
+# Test Strategy:
+Test record update, error handling, and table refresh. Verify drawer closes on success.

@@ -1,0 +1,263 @@
+{
+  "master": {
+    "tasks": [
+      {
+        "id": 1,
+        "title": "Setup Project Repository",
+        "description": "Initialize a new Next.js project with TypeScript and Tailwind CSS, following best practices for project structure and version control.",
+        "details": "Use `npx create-next-app@latest --typescript` to scaffold the project. Install Tailwind CSS v3.4.3+ and configure it. Initialize a Git repository and set up a `.gitignore` file. Add basic README and project documentation.",
+        "testStrategy": "Verify project creation by running `npm run dev` and checking for a working Next.js starter page. Confirm Tailwind CSS is applied by adding a test class.",
+        "priority": "high",
+        "dependencies": [],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 2,
+        "title": "Configure Supabase Backend",
+        "description": "Set up Supabase project and configure the `meetings` table with required columns.",
+        "details": "Create a new Supabase project. Define the `meetings` table with columns: id (UUID), title (text), time (timestamp), content (text), created_at (timestamp), updated_at (timestamp). Enable row-level security if required. Install Supabase JS SDK v2.39.0+.",
+        "testStrategy": "Verify table creation and schema in Supabase dashboard. Test basic CRUD operations using the Supabase JS SDK in a test script.",
+        "priority": "high",
+        "dependencies": [
+          1
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 3,
+        "title": "Implement Authentication (Optional MVP)",
+        "description": "Add user authentication using Supabase Auth if required for MVP.",
+        "details": "Configure Supabase Auth. Implement login/logout UI and protect routes as needed. Use Supabase JS SDK for authentication.",
+        "testStrategy": "Test user sign-up, login, and logout. Verify protected routes are inaccessible without authentication.",
+        "priority": "medium",
+        "dependencies": [
+          2
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 4,
+        "title": "Design Meeting Minutes Table UI",
+        "description": "Create a responsive table component to display meeting minutes.",
+        "details": "Use Tailwind CSS for styling. Implement a table with columns for Meeting Title and Meeting Time. Make rows clickable. Ensure the table is responsive and accessible.",
+        "testStrategy": "Test table rendering, responsiveness, and click behavior on different devices. Verify accessibility with keyboard navigation.",
+        "priority": "high",
+        "dependencies": [
+          1
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 5,
+        "title": "Implement Drawer Component",
+        "description": "Create a reusable drawer component for viewing and editing meeting minutes.",
+        "details": "Use Hero UI or custom drawer with Tailwind CSS. Ensure the drawer slides in from the right and overlays the table. Add close and cancel buttons.",
+        "testStrategy": "Test drawer opening/closing, overlay behavior, and button functionality. Verify accessibility.",
+        "priority": "high",
+        "dependencies": [
+          1
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 6,
+        "title": "Fetch and Display Meeting Minutes",
+        "description": "Fetch meeting minutes from Supabase and display them in the table.",
+        "details": "Use Supabase JS SDK to fetch all meetings. Map data to the table component. Handle loading and error states.",
+        "testStrategy": "Test data fetching, table population, and error handling. Verify empty state and loading indicators.",
+        "priority": "high",
+        "dependencies": [
+          2,
+          4
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 7,
+        "title": "Implement Meeting Minutes Detail View",
+        "description": "Display a single meeting minute in read-only Markdown format in the drawer.",
+        "details": "Use `react-markdown` v8.0.7+ to render Markdown content. Open drawer on row click. Keep table visible in background.",
+        "testStrategy": "Test drawer opens with correct content. Verify Markdown rendering and table persistence.",
+        "priority": "high",
+        "dependencies": [
+          5,
+          6
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 8,
+        "title": "Add Edit Mode to Drawer",
+        "description": "Enable editing of meeting minutes in the drawer with WYSIWYG Markdown editor and live preview.",
+        "details": "Add edit icon to drawer. Toggle between read-only and edit modes. Use `@uiw/react-md-editor` v3.23.0+ for WYSIWYG editing and live preview. Pre-fill fields with existing data.",
+        "testStrategy": "Test edit mode toggle, editor functionality, and live preview. Verify data pre-filling.",
+        "priority": "high",
+        "dependencies": [
+          5,
+          7
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 9,
+        "title": "Implement Add New Meeting Minute Flow",
+        "description": "Add a button to open a drawer for creating new meeting minutes.",
+        "details": "Add 'Add Meeting Minutes' button. Open drawer with empty fields. Use WYSIWYG editor and live preview. Include Meeting Title, Meeting Time (datetime picker), and Meeting Content fields.",
+        "testStrategy": "Test button click, drawer opening, and field validation. Verify editor and preview functionality.",
+        "priority": "high",
+        "dependencies": [
+          5,
+          8
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 10,
+        "title": "Save New Meeting Minute to Supabase",
+        "description": "Save new meeting minutes to the Supabase database.",
+        "details": "On save, send data to Supabase using the JS SDK. Close drawer on success. Update table with new row.",
+        "testStrategy": "Test data submission, error handling, and table update. Verify drawer closes on success.",
+        "priority": "high",
+        "dependencies": [
+          2,
+          9
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 11,
+        "title": "Update Existing Meeting Minute in Supabase",
+        "description": "Update existing meeting minutes in the Supabase database.",
+        "details": "On save in edit mode, update the record in Supabase. Close drawer and update table.",
+        "testStrategy": "Test record update, error handling, and table refresh. Verify drawer closes on success.",
+        "priority": "high",
+        "dependencies": [
+          2,
+          8
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 12,
+        "title": "Implement Error Handling and Notifications",
+        "description": "Add inline notifications for network or database errors.",
+        "details": "Use toast notifications or custom UI for error messages. Handle Supabase and network errors gracefully.",
+        "testStrategy": "Test error scenarios (e.g., network failure, invalid data). Verify notifications are displayed.",
+        "priority": "medium",
+        "dependencies": [
+          6,
+          10,
+          11
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 13,
+        "title": "Ensure Responsive Design",
+        "description": "Make the application fully responsive for mobile, tablet, and desktop.",
+        "details": "Use Tailwind CSS responsive utilities. Test all components and layouts on different screen sizes.",
+        "testStrategy": "Test UI on various devices and screen sizes. Verify all interactions work as expected.",
+        "priority": "medium",
+        "dependencies": [
+          4,
+          5,
+          9
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 14,
+        "title": "Implement Keyboard Accessibility",
+        "description": "Ensure all drawers and buttons are accessible via keyboard.",
+        "details": "Add keyboard event listeners for drawer and button interactions. Use ARIA attributes for accessibility.",
+        "testStrategy": "Test all interactions using keyboard only. Verify focus management and ARIA compliance.",
+        "priority": "medium",
+        "dependencies": [
+          5,
+          9
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 15,
+        "title": "Add Cancel Button to Drawer",
+        "description": "Add a cancel button to the drawer for discarding changes.",
+        "details": "Add cancel button next to save. Close drawer without saving on cancel.",
+        "testStrategy": "Test cancel button functionality. Verify drawer closes and changes are discarded.",
+        "priority": "medium",
+        "dependencies": [
+          5,
+          9
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 16,
+        "title": "Optimize Data Fetching and Caching",
+        "description": "Optimize data fetching and implement client-side caching for better performance.",
+        "details": "Use SWR or React Query for data fetching and caching. Invalidate cache on updates.",
+        "testStrategy": "Test data fetching performance and cache invalidation. Verify UI updates correctly.",
+        "priority": "low",
+        "dependencies": [
+          6,
+          10,
+          11
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 17,
+        "title": "Add Row-Level Security (Optional)",
+        "description": "Implement row-level security in Supabase if required.",
+        "details": "Configure row-level security policies in Supabase. Test with different user roles.",
+        "testStrategy": "Test access control with different users. Verify only authorized users can access data.",
+        "priority": "low",
+        "dependencies": [
+          2,
+          3
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 18,
+        "title": "Final Testing and Documentation",
+        "description": "Perform end-to-end testing and update project documentation.",
+        "details": "Write end-to-end tests using Cypress or Playwright. Update README and inline documentation.",
+        "testStrategy": "Run end-to-end tests. Verify all features and edge cases. Review documentation for completeness.",
+        "priority": "medium",
+        "dependencies": [
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ],
+        "status": "pending",
+        "subtasks": []
+      }
+    ],
+    "metadata": {
+      "created": "2025-07-07T17:58:56.172Z",
+      "updated": "2025-07-07T17:58:56.172Z",
+      "description": "Tasks for master context"
+    }
+  }
+}

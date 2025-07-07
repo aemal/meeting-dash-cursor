@@ -1,0 +1,11 @@
+# Task ID: 6
+# Title: Fetch and Display Meeting Minutes
+# Status: pending
+# Dependencies: 2, 4
+# Priority: high
+# Description: Fetch meeting minutes from Supabase and display them in the table.
+# Details:
+Use Supabase JS SDK to fetch all meetings. Map data to the table component. Handle loading and error states.
+
+# Test Strategy:
+Test data fetching, table population, and error handling. Verify empty state and loading indicators.

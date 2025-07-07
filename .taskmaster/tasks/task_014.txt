@@ -1,0 +1,11 @@
+# Task ID: 14
+# Title: Implement Keyboard Accessibility
+# Status: pending
+# Dependencies: 5, 9
+# Priority: medium
+# Description: Ensure all drawers and buttons are accessible via keyboard.
+# Details:
+Add keyboard event listeners for drawer and button interactions. Use ARIA attributes for accessibility.
+
+# Test Strategy:
+Test all interactions using keyboard only. Verify focus management and ARIA compliance.

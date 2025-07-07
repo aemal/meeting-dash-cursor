@@ -1,0 +1,11 @@
+# Task ID: 17
+# Title: Add Row-Level Security (Optional)
+# Status: pending
+# Dependencies: 2, 3
+# Priority: low
+# Description: Implement row-level security in Supabase if required.
+# Details:
+Configure row-level security policies in Supabase. Test with different user roles.
+
+# Test Strategy:
+Test access control with different users. Verify only authorized users can access data.

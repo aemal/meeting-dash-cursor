@@ -1,0 +1,11 @@
+# Task ID: 3
+# Title: Implement Authentication (Optional MVP)
+# Status: pending
+# Dependencies: 2
+# Priority: medium
+# Description: Add user authentication using Supabase Auth if required for MVP.
+# Details:
+Configure Supabase Auth. Implement login/logout UI and protect routes as needed. Use Supabase JS SDK for authentication.
+
+# Test Strategy:
+Test user sign-up, login, and logout. Verify protected routes are inaccessible without authentication.

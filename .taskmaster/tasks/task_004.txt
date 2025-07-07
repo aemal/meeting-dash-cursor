@@ -1,0 +1,11 @@
+# Task ID: 4
+# Title: Design Meeting Minutes Table UI
+# Status: pending
+# Dependencies: 1
+# Priority: high
+# Description: Create a responsive table component to display meeting minutes.
+# Details:
+Use Tailwind CSS for styling. Implement a table with columns for Meeting Title and Meeting Time. Make rows clickable. Ensure the table is responsive and accessible.
+
+# Test Strategy:
+Test table rendering, responsiveness, and click behavior on different devices. Verify accessibility with keyboard navigation.

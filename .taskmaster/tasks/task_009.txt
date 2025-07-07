@@ -1,0 +1,11 @@
+# Task ID: 9
+# Title: Implement Add New Meeting Minute Flow
+# Status: pending
+# Dependencies: 5, 8
+# Priority: high
+# Description: Add a button to open a drawer for creating new meeting minutes.
+# Details:
+Add 'Add Meeting Minutes' button. Open drawer with empty fields. Use WYSIWYG editor and live preview. Include Meeting Title, Meeting Time (datetime picker), and Meeting Content fields.
+
+# Test Strategy:
+Test button click, drawer opening, and field validation. Verify editor and preview functionality.

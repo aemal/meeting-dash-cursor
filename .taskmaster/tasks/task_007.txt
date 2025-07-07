@@ -1,0 +1,11 @@
+# Task ID: 7
+# Title: Implement Meeting Minutes Detail View
+# Status: pending
+# Dependencies: 5, 6
+# Priority: high
+# Description: Display a single meeting minute in read-only Markdown format in the drawer.
+# Details:
+Use `react-markdown` v8.0.7+ to render Markdown content. Open drawer on row click. Keep table visible in background.
+
+# Test Strategy:
+Test drawer opens with correct content. Verify Markdown rendering and table persistence.

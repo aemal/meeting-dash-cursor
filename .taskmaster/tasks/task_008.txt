@@ -1,0 +1,11 @@
+# Task ID: 8
+# Title: Add Edit Mode to Drawer
+# Status: pending
+# Dependencies: 5, 7
+# Priority: high
+# Description: Enable editing of meeting minutes in the drawer with WYSIWYG Markdown editor and live preview.
+# Details:
+Add edit icon to drawer. Toggle between read-only and edit modes. Use `@uiw/react-md-editor` v3.23.0+ for WYSIWYG editing and live preview. Pre-fill fields with existing data.
+
+# Test Strategy:
+Test edit mode toggle, editor functionality, and live preview. Verify data pre-filling.

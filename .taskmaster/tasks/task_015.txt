@@ -1,0 +1,11 @@
+# Task ID: 15
+# Title: Add Cancel Button to Drawer
+# Status: pending
+# Dependencies: 5, 9
+# Priority: medium
+# Description: Add a cancel button to the drawer for discarding changes.
+# Details:
+Add cancel button next to save. Close drawer without saving on cancel.
+
+# Test Strategy:
+Test cancel button functionality. Verify drawer closes and changes are discarded.

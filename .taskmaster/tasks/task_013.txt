@@ -1,0 +1,11 @@
+# Task ID: 13
+# Title: Ensure Responsive Design
+# Status: pending
+# Dependencies: 4, 5, 9
+# Priority: medium
+# Description: Make the application fully responsive for mobile, tablet, and desktop.
+# Details:
+Use Tailwind CSS responsive utilities. Test all components and layouts on different screen sizes.
+
+# Test Strategy:
+Test UI on various devices and screen sizes. Verify all interactions work as expected.

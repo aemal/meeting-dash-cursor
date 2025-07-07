@@ -1,0 +1,11 @@
+# Task ID: 5
+# Title: Implement Drawer Component
+# Status: pending
+# Dependencies: 1
+# Priority: high
+# Description: Create a reusable drawer component for viewing and editing meeting minutes.
+# Details:
+Use Hero UI or custom drawer with Tailwind CSS. Ensure the drawer slides in from the right and overlays the table. Add close and cancel buttons.
+
+# Test Strategy:
+Test drawer opening/closing, overlay behavior, and button functionality. Verify accessibility.

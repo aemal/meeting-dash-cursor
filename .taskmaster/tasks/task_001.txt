@@ -1,0 +1,11 @@
+# Task ID: 1
+# Title: Setup Project Repository
+# Status: pending
+# Dependencies: None
+# Priority: high
+# Description: Initialize a new Next.js project with TypeScript and Tailwind CSS, following best practices for project structure and version control.
+# Details:
+Use `npx create-next-app@latest --typescript` to scaffold the project. Install Tailwind CSS v3.4.3+ and configure it. Initialize a Git repository and set up a `.gitignore` file. Add basic README and project documentation.
+
+# Test Strategy:
+Verify project creation by running `npm run dev` and checking for a working Next.js starter page. Confirm Tailwind CSS is applied by adding a test class.

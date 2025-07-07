@@ -1,0 +1,11 @@
+# Task ID: 2
+# Title: Configure Supabase Backend
+# Status: pending
+# Dependencies: 1
+# Priority: high
+# Description: Set up Supabase project and configure the `meetings` table with required columns.
+# Details:
+Create a new Supabase project. Define the `meetings` table with columns: id (UUID), title (text), time (timestamp), content (text), created_at (timestamp), updated_at (timestamp). Enable row-level security if required. Install Supabase JS SDK v2.39.0+.
+
+# Test Strategy:
+Verify table creation and schema in Supabase dashboard. Test basic CRUD operations using the Supabase JS SDK in a test script.
