@@ -1,0 +1,33 @@
+{
+  "name": "meeting-dash-cursor",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "15.1.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "@supabase/supabase-js": "^2.38.0",
+    "react-markdown": "^9.0.1",
+    "@uiw/react-md-editor": "^4.0.4",
+    "@headlessui/react": "^2.0.4",
+    "@heroicons/react": "^2.0.18",
+    "framer-motion": "^11.5.6"
+  },
+  "devDependencies": {
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8",
+    "eslint-config-next": "15.1.0"
+  }
+} 
